@@ -30,6 +30,17 @@
 */
 
 //Code Here
+class Employee {
+  constructor(firstName, lastName, email, age){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.age = age;
+  }
+  makeWidget(){
+    return (`${this.firstName} ${this.lastName} Widget`)
+  }
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -48,6 +59,23 @@
 */
 
 //Code Here
+class Manager extends Employee{
+  constructor(firstName, lastName, email, age, reports, hire, fire){
+    super(firstName, lastName, email, age);
+    this.reports = reports;
+    this.hire = hire;
+    this.fire = fire;
+  }
+  reports(){
+    return [];
+  }
+  hire(employee){
+    return this.reports.push()
+  }
+  fire(employee){
+    return this.reports.splice()
+  }
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -72,7 +100,14 @@
 */
 
 //Code Here
-
+class ProgressiveManager extends Manager{
+  constructor(firstName, lastName, email, age, reports, hire, fire, title, bonus){
+    super(firstName, lastName, email, age, reports, hire, fire,);
+    this.title = 'Not a manager';
+    this.bonus = 0;
+  }
+  fire()
+}
 
 
 ////////// PROBLEM 4 - Black Diamond //////////
