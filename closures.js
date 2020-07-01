@@ -27,6 +27,8 @@ let inner = outer()
 
 
 
+
+
 //Once you do that, invoke inner.
 
 //Code Here
@@ -53,7 +55,7 @@ function callFriend(name) {
   (HINT: You will need to pass in arguments to both function invocations)
 */
 
-//Code Here
+// //Code Here
 let callJake = callFriend('Jake', 435-215-9248);
 
 
@@ -78,9 +80,9 @@ function makeCounter(){
 //Uncomment this once you make your function
   var count = makeCounter();
   count(); // 1
-  count(); // 2
-  count(); // 3
-  count(); // 4
+  // count(); // 2
+  // count(); // 3
+  // count(); // 4
 
 
 
@@ -162,11 +164,15 @@ var module = (function() {
   // Anything that is being returned is made public and can be invoked from
   // outside our lexical scope
   return {
-    // publicMethod: module.privateMethod(){
-    
-    // }
-  }
-});
+    publicMethod: function(){
+      return privateMethod()
+    }
+   
+    }
+   
+  // }
+})();
+
 
 
 
@@ -218,9 +224,9 @@ function secretNumber() {
 
 function timeOutCounter() {
   
- for (var i = 0; i <= 5; i++) {
+ for (let i = 0; i <= 5; i++) {
     setTimeout(function() {
-      console.log(arr[i]);
+      console.log(i);
     }, i * 1000);
   }
 
@@ -240,4 +246,4 @@ timeOutCounter();
 //     }, i * 1000);
 //   }
 // }
-// timeOutCounter();
+// timeOutCounter(){};
